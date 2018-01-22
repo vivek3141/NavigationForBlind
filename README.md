@@ -9,4 +9,4 @@ to
 <br />
 `cap = cv2.VideoCapture("challenge.mp4")`
 <br /><br />
-![alt text](https://github.com/vivek3141/NavigationForBlind/tree/master/Documentation/road.png)
+![alt text](https://github.com/vivek3141/NavigationForBlind/blob/master/Documentation/road.PNG)
