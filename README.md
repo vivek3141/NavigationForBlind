@@ -27,7 +27,7 @@ The picture below shows the algorithm working. The dark blue lines is the output
 <br /><br />
 
 ### Achievements
-This program also won 3rd place for TechCare at CruzHacks 2018.
+This program won 3rd place for Tech Cares at CruzHacks 2018.
 <br />
 https://devpost.com/software/navigation-for-the-blind-kdyufq
 
