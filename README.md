@@ -22,6 +22,7 @@ These can be installed by running `pip install modulename`
 Math and Time modules are used, but inbuilt.
 <br /><br />
 # Displayed Lines
+<br />
 The picture below shows the algorithm working. The dark blue lines is the output that the edge detection algorithm gave. Quadratic regression gives the light blue lines and linear regression gives the black lines. 
 <br /><br />
 
