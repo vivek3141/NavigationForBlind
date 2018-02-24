@@ -27,3 +27,10 @@ The picture below shows the algorithm working. The dark blue lines is the output
 <br /><br />
 
 ![alt text](https://github.com/vivek3141/NavigationForBlind/blob/master/Documentation/road.PNG)
+<br />
+<br />
+
+### Achievements
+This program also won 3rd place for TechCare at CruzHacks 2018.
+<br />
+https://devpost.com/software/navigation-for-the-blind-kdyufq
