@@ -1,22 +1,42 @@
+"""
+This python program detects sidewalks and gives real time navigation to a blind man using the camera. It uses a python module called OpenCV for edge detection and numpy for Machine Learning. Points are taken from a certain region of interest which the area below the webcam. Linear Regression gives us line from two clusters of points(from both sides of the sidewalk. Nonlinear regression also gave us two curves from these two clusters. The point of intersection determines the descision of going left,right or straight, which is stored in a text file called write.txt The second file say.py takes the data from the text file and outputs it by voice using a module called pysttx3
+
+The video provided can be used to display this, by default it uses the computer's webcam. To do this change
+cap = cv2.VideoCapture(0)
+
+to
+cap = cv2.VideoCapture("challenge.mp4")
+
+To run the program, two python files main.py and say.py should be run simultaneously.
+Required Modules
+
+These can be installed by running pip install modulename
+
+    Opencv
+    Numpy
+    Scipy
+    pyttsx3
+
+
+Math and Time modules are used, but inbuilt.
+Displayed Lines
+
+The picture below shows the algorithm working. The dark blue lines is the output that the edge detection algorithm gave. Quadratic regression gives the light blue lines and linear regression gives the black lines.
+
+Achievements
+
+This program won 3rd place for Tech Cares at CruzHacks 2018.
+https://devpost.com/software/navigation-for-the-blind-kdyufq
+"""
+
 import cv2
 import numpy as np
 from numpy import ones,vstack
 from numpy.linalg import lstsq
 import math
-from time import sleep
 from scipy.optimize import curve_fit
-import matplotlib.pyplot as plt
-import sympy
-from scipy import stats
-import pyttsx3 as p
 
-cap = cv2.VideoCapture(0)
-engine = p.init()
-      
-def checkSlope(x1,y1,x2,y2):
-    if not(x1 == x2):
-        a = False if ((y2-y1)/(x2-x1)) < 0 else True
-        return a
+
 def intersection(line,line1):
     #if(line[0]-line1[0]) == 0:
     #    return None
@@ -265,16 +285,15 @@ def run(screen):
         filterl1y = []
         filterl2x = []
         filterl2y = []
-        
-        #cv2.line(screen, (int(allxcor1),600), ( int(allxcor2),400), (255,255,255), 10)
 
-##        for count, i in enumerate(ycors):
-##            if (i*allm + allb < xcors[count]):
-##                filterl2x.append(xcors[count])
-##                filterl2y.append(i)
-##            else:
-##                filterl1x.append(xcors[count])
-##                filterl1y.append(i)
+#       cv2.line(screen, (int(allxcor1),600), ( int(allxcor2),400), (255,255,255), 10)
+#           for count, i in enumerate(ycors):
+#               if (i*allm + allb < xcors[count]):
+#                   filterl2x.append(xcors[count])
+#                   filterl2y.append(i)
+#               else:
+#                   filterl1x.append(xcors[count])
+#                   filterl1y.append(i)
         
 
         for count, i in enumerate(ycors):
@@ -314,8 +333,6 @@ def run(screen):
             #print(str(equ1[0]) + "x^2 + " + str(equ1[1]) + "x + " + str(equ1[2]))
             #intersect1 = findIntersection(l2m, l2b, equ1[0], equ1[1], equ1[2])
             #print(intersect1)
-            
-
             for i in range(len(polyx1)):
                 if i == 0:
                     pass
@@ -331,28 +348,25 @@ def run(screen):
                     pass
                 else:
                     cv2.line(screen, (int(polyx2[i]), int(polyy2[i])), (int(polyx2[i-1]), int(polyy2[i-1])), (255,255,0), 10)
-            
         except:
             pass
-
-            
-       
-        
     except Exception as e:
-        print(e)
+        pass
     
     return screen
 
 
-
+cap = cv2.VideoCapture("challenge.mp4")
 
 while True:
-    _,screen = cap.read()
-    screen = cv2.resize(screen, (800,600))
-    cv2.imshow("Test", run(screen))
-    
+    try:
+        screen = cap.read()[1]
+        screen = cv2.resize(screen, (800,600))
+        cv2.imshow("Test", run(screen))
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            cap.release()
+            cv2.destroyAllWindows()
+            break
+    except cv2.error:
+        exit()
 
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-cap.release()
-cv2.destroyAllWindows()
