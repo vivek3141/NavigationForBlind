@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd4d6327-1486-42e0-8f82-1ee5a08ded88" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/NavigationForBlind.iml" afterPath="$PROJECT_DIR$/.idea/NavigationForBlind.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,8 +16,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8750">
-              <caret line="350" column="14" lean-forward="false" selection-start-line="350" selection-start-column="14" selection-end-line="350" selection-end-column="14" />
+            <state relative-caret-position="275">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
                 <element signature="e#1490#1500#0" expanded="true" />
               </folding>
@@ -148,6 +145,14 @@
       <option name="presentableId" value="Default" />
       <updated>1516574075366</updated>
     </task>
+    <task id="LOCAL-00001" summary="Fixing a few things and adding documentation">
+      <created>1519542420533</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1519542420533</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -175,6 +180,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fixing a few things and adding documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing a few things and adding documentation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -245,8 +254,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8750">
-          <caret line="350" column="14" lean-forward="false" selection-start-line="350" selection-start-column="14" selection-end-line="350" selection-end-column="14" />
+        <state relative-caret-position="275">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
             <element signature="e#1490#1500#0" expanded="true" />
           </folding>
