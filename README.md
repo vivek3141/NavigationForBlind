@@ -4,11 +4,15 @@ The second file `say.py` takes the data from the text file and outputs it by voi
 <br /><br />
 The video provided can be used to display this, by default it uses the computer's webcam. To do this change
 <br />
-`cap = cv2.VideoCapture(0)`
+```python
+cap = cv2.VideoCapture(0)
+```
 <br /><br />
 to
 <br />
-`cap = cv2.VideoCapture("challenge.mp4")`
+```python
+cap = cv2.VideoCapture("challenge.mp4")
+```
 <br /><br />
 To run the program, two python files `main.py` and `say.py` should be run simultaneously.
 <br />
